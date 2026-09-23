@@ -296,9 +296,19 @@ export function TrustRow({ t }) {
         </View>
         <View style={styles.trustLine}>
           <Ionicons name="lock-closed-outline" size={18} color={colors.primary} />
-          <Text style={[typography.bodyMuted, { flex: 1 }]} numberOfLines={2}>
-            {t.securePayments} <Text style={styles.razorpay}>Razorpay</Text>
-          </Text>
+          <View style={styles.secureBlock}>
+            <Text style={[typography.bodyMuted, styles.secureLabel]} numberOfLines={2}>
+              {t.securePayments}
+            </Text>
+            {/* The real mark rather than styled text - resizeMode keeps the
+                aspect ratio fixed so the wordmark never distorts. */}
+            <Image
+              source={require('../../assets/razorpay-logo.png')}
+              style={styles.razorpayLogo}
+              resizeMode="contain"
+              accessibilityLabel="Razorpay"
+            />
+          </View>
         </View>
       </View>
     </View>
@@ -464,7 +474,10 @@ const styles = StyleSheet.create({
   trustSub: { ...typography.label, color: colors.accent, marginTop: 2 },
   trustSide: { flex: 1, justifyContent: 'center', gap: spacing.md, paddingLeft: spacing.md, marginTop: spacing.md },
   trustLine: { flexDirection: 'row', alignItems: 'center', gap: spacing.sm },
-  razorpay: { color: '#0C64C0', fontWeight: '700' },
+  secureBlock: { flex: 1, minWidth: 0 },
+  secureLabel: { fontSize: 11, lineHeight: 14 },
+  // 4.4:1 is the cropped asset's aspect ratio - height follows from width.
+  razorpayLogo: { width: 72, height: 16, marginTop: 4 },
 
   // referral
   referral: {
