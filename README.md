@@ -10,6 +10,19 @@ in the viewer's language, resolved against the server clock.
 
 ---
 
+## Demo
+
+[`docs/demo.mp4`](docs/demo.mp4) — 33s walkthrough of the working implementation:
+language toggle (ENG ⇄ हिंदी), a full scroll of the screen, registration, the
+mock checkout with its live seat-hold timer, and payment confirmation flipping
+the screen to `Registered` as the count moves **19 → 18 spots** and the CTA
+becomes `Upload Submission`.
+
+Recorded against the web target (`npm start` → `w`); the same component tree
+runs on Android and iOS.
+
+---
+
 ## Quick start
 
 Two terminals. **No database installation required** — if `MONGODB_URI` is empty the
