@@ -89,11 +89,11 @@ const styles = StyleSheet.create({
   chip: {
     backgroundColor: colors.chip,
     borderRadius: radius.sm,
-    paddingHorizontal: spacing.md,
-    paddingVertical: 6,
+    paddingHorizontal: 10,
+    paddingVertical: 5,
   },
   chipSuccess: { backgroundColor: colors.successTint, flexDirection: 'row', alignItems: 'center' },
-  chipText: { fontSize: 12, color: colors.text, fontWeight: '500' },
+  chipText: { fontSize: 11, color: colors.text, fontWeight: '500' },
   chipTextSuccess: { color: colors.success, fontWeight: '600' },
 
   iconBadge: { alignItems: 'center', justifyContent: 'center' },
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
   dividerH: { height: 1, backgroundColor: colors.divider, width: '100%' },
   dividerV: { width: 1, backgroundColor: colors.divider, alignSelf: 'stretch' },
 
-  track: { height: 6, borderRadius: 3, backgroundColor: colors.track, overflow: 'hidden' },
+  track: { height: 5, borderRadius: 3, backgroundColor: colors.track, overflow: 'hidden' },
   fill: { height: '100%', borderRadius: 3, backgroundColor: colors.primary },
 
   play: {
@@ -113,14 +113,14 @@ const styles = StyleSheet.create({
   primaryBtn: {
     backgroundColor: colors.primary,
     borderRadius: radius.md,
-    paddingVertical: 14,
+    paddingVertical: 11,
     alignItems: 'center',
     justifyContent: 'center',
-    minHeight: 56,
+    minHeight: 48,
   },
   primaryBtnMuted: { backgroundColor: colors.textFaint },
   primaryBtnDisabled: { backgroundColor: '#B6C4C7' },
   primaryBtnPressed: { backgroundColor: colors.primaryDeep },
-  primaryBtnText: { color: colors.white, fontSize: 16, fontWeight: '700' },
-  primaryBtnSub: { color: 'rgba(255,255,255,0.85)', fontSize: 12, marginTop: 2 },
+  primaryBtnText: { color: colors.white, fontSize: 15, fontWeight: '700' },
+  primaryBtnSub: { color: 'rgba(255,255,255,0.85)', fontSize: 11, marginTop: 1 },
 });

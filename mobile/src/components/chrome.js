@@ -129,11 +129,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: spacing.lg,
-    paddingVertical: spacing.md,
+    paddingVertical: 10,
     backgroundColor: colors.bg,
   },
   back: { flexDirection: 'row', alignItems: 'center', gap: spacing.md },
-  backText: { fontSize: 17, fontWeight: '700', color: colors.text },
+  backText: { fontSize: 16, fontWeight: '700', color: colors.text },
 
   localeSwitch: {
     flexDirection: 'row',
@@ -141,13 +141,13 @@ const styles = StyleSheet.create({
     borderRadius: radius.pill,
     padding: 3,
   },
-  localeOption: { paddingHorizontal: spacing.lg, paddingVertical: 6, borderRadius: radius.pill },
+  localeOption: { paddingHorizontal: spacing.md, paddingVertical: 5, borderRadius: radius.pill },
   localeOptionActive: { backgroundColor: colors.primary },
-  localeText: { fontSize: 12, fontWeight: '700', color: colors.textMuted },
+  localeText: { fontSize: 11, fontWeight: '700', color: colors.textMuted },
   localeTextActive: { color: colors.white },
 
   ctaBar: {
-    paddingHorizontal: spacing.md,
+    paddingHorizontal: spacing.lg,
     paddingTop: spacing.sm,
     backgroundColor: colors.bg,
   },

@@ -115,7 +115,7 @@ export const strings = {
     submissionEnds: 'प्रविष्टि समाप्त',
     resultDate: 'परिणाम तिथि',
     previousWinners: 'पिछले विजेता',
-    winnerPosition: (n) => `${n} विजेता`,
+    winnerPosition: (n) => `${hindiOrdinal(n)} विजेता`,
     tabs: { about: 'प्रतियोगिता के बारे में', judging: 'निर्णय मानदंड', rules: 'नियम व पात्रता' },
     viewMore: 'और देखें',
     viewLess: 'कम देखें',
@@ -174,6 +174,12 @@ export const strings = {
     payNow: 'भुगतान करें',
   },
 };
+
+/** Hindi uses ordinal words, not a numeral prefix: 1 -> प्रथम. */
+const HINDI_ORDINALS = ['प्रथम', 'द्वितीय', 'तृतीय', 'चतुर्थ', 'पंचम', 'षष्ठ'];
+function hindiOrdinal(n) {
+  return HINDI_ORDINALS[n - 1] || `${n}वाँ`;
+}
 
 function ordinal(n) {
   const s = ['th', 'st', 'nd', 'rd'];

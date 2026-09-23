@@ -256,16 +256,21 @@ against the registration collection and is exposed at
 3. **Submissions are URLs, not uploads.** Real media ingestion means S3 presigned
    uploads + transcoding — infrastructure, not business logic, and not what this
    assignment is probing.
-4. **Seeded dates are relative to *now***, not the literal August 2026 dates in the
+4. **Placeholder media.** Judge photo, winner thumbnails and video URLs point at
+   placeholder services; play buttons are affordances, not a wired video player.
+   Copy-link shows its confirmation state without touching the clipboard
+   (that needs `expo-clipboard`). The graded behaviour - registration, payment,
+   capacity, lifecycle, submission - is fully functional.
+5. **Seeded dates are relative to *now***, not the literal August 2026 dates in the
    design, which are in the past and would render the screen in its results state with
    no countdown and no working Register flow. The primary competition is offset so the
    countdown reads ~`01d : 06h : 28m`, matching the design. Four more competitions are
    seeded in the other lifecycle states (sold out, submission open, results declared,
    not yet open, free entry).
-5. **Judging is not modelled** beyond scores/ranks — the design shows no judging UI.
-6. **Single screen, no navigator** — the assignment scopes one module. The screen drops
+6. **Judging is not modelled** beyond scores/ranks — the design shows no judging UI.
+7. **Single screen, no navigator** — the assignment scopes one module. The screen drops
    into a stack unchanged.
-7. Assets (videos, avatars, thumbnails) are placeholder URLs.
+8. Assets are placeholder URLs.
 
 ---
 

@@ -23,7 +23,7 @@ export function HeroCard({ competition, capacity, isRegistered, t }) {
 
         {isRegistered ? (
           <View style={styles.registeredPill}>
-            <Ionicons name="checkmark-circle" size={16} color={colors.success} />
+            <Ionicons name="checkmark-circle" size={16} color={colors.primary} />
             <Text style={styles.registeredText}>{t.registered}</Text>
           </View>
         ) : null}
@@ -78,22 +78,22 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 6,
-    backgroundColor: colors.successTint,
+    backgroundColor: colors.primaryTint,
     paddingHorizontal: spacing.md,
     paddingVertical: 8,
     borderRadius: 10,
   },
-  registeredText: { color: colors.success, fontWeight: '700', fontSize: 13 },
+  registeredText: { color: colors.primary, fontWeight: '700', fontSize: 12 },
 
-  tagRow: { flexDirection: 'row', alignItems: 'center', flexWrap: 'wrap', gap: spacing.sm, marginTop: spacing.md },
+  tagRow: { flexDirection: 'row', alignItems: 'center', flexWrap: 'wrap', gap: 6, marginTop: 8 },
   certificate: { flexDirection: 'row', alignItems: 'center', gap: 6 },
-  certificateText: { color: colors.primary, fontSize: 13, fontWeight: '600' },
+  certificateText: { color: colors.primary, fontSize: 12, fontWeight: '600' },
 
-  statsRow: { flexDirection: 'row', alignItems: 'flex-end', marginTop: spacing.xl, gap: spacing.md },
-  stat: { minWidth: 82 },
+  statsRow: { flexDirection: 'row', alignItems: 'flex-end', marginTop: 10, gap: spacing.sm },
+  stat: { minWidth: 72 },
 
   capacity: { flex: 1, marginLeft: spacing.sm },
-  capacityLabel: { flexDirection: 'row', alignItems: 'center', gap: 6, marginBottom: spacing.sm },
-  capacityText: { color: colors.primary, fontSize: 13, fontWeight: '600', flexShrink: 1 },
+  capacityLabel: { flexDirection: 'row', alignItems: 'center', gap: 5, marginBottom: 6 },
+  capacityText: { color: colors.primary, fontSize: 12, fontWeight: '600', flexShrink: 1 },
   bookedText: { ...typography.label, marginTop: 6 },
 });
